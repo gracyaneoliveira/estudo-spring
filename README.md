@@ -89,3 +89,20 @@ sdk default java 22-oracle
 
 sdk list java | grep installed
 ````
+
+### Nota
+````text
+O arquivo .class é um arquivo de bytecode gerado pelo javac e a JVM consegue interpretar esse arquivo.
+
+OlaMergulhado.java (arquivo de codigo fonte)
+OlaMergulhado.class (arquivo de bytecode) Só preciso desse arquivo para rodar o código.
+
+# Executar:
+java OlaMergulhado
+
+A JVM executa códigos pre-compilados. Faz o gerenciamento de memória, processos, de segurança, de arquivos.
+A JVM faz uma interpretação desse arquivo.
+
+JIT Just in time compiler- compilador: Ele pode transformar instruções do bytecode em código nativo de máquina durante a execução do programa
+se ele assim achar necessário, como um código é executado repetidas vezes.  
+````
