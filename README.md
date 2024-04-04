@@ -3,7 +3,7 @@
 ### Introdução
 
 - Instalação Java 17
-- Spring Initilizer
+- Spring Initializer
 - Maven
 - Controller
 - Api Context Path
@@ -34,16 +34,26 @@ server.servlet.context-path=/api
 # Opção 1
 sudo apt update
 java -version
-sudo apt install openjdk-17-jre-headless
+sudo apt install openjdk-17-jdk
 
-# Configurando JAVA_HOME
-sudo vim /etc/environment
-JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
-source /etc/environment
+# NOTA: A configuração abaixo não é necessária para instalação do Java,
+# No entanto algumas aplicações que dependem do Java, requerem a variável
+# de ambiente JAVA_HOME que indica o caminho de instalação dele.
+
+# Passo 1: Configurando JAVA_HOME, edite o arquivo .bashrc
+sudo vim ~/.bashrc
+
+# Passo 2: Adicione esse trecho ao final do arquivo .bashrc
+export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
+
+# Passo 3: Reload
+source ~/.bashrc
 echo $JAVA_HOME
 
-# Testando
-# Criar um arquivo MeuPrograma.java com o conteudo:
+
+# Passo 4: Testando
+# Criar um arquivo MeuPrograma.java com o conteúdo:
 public class MeuPrograma {
 
     public static void main(String[] args) {
@@ -51,7 +61,7 @@ public class MeuPrograma {
     }
 }
 
-# Compilar:
+# Passo 5: Compilar
 javac Main.java
 # Executar
 java Main
@@ -67,7 +77,7 @@ curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 sdk version
-sdk java list
+sdk list java
 sdk install java 17.0.10-tem
 sdk current java
 
@@ -87,6 +97,7 @@ source .bashrc
 sdk install java 22-oracle
 sdk default java 22-oracle
 
+# Ver versão do java instalado
 sdk list java | grep installed
 ````
 
