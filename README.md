@@ -108,7 +108,7 @@ public class MeuPrograma {
     }
 }
 
-# Passo 5: Compilar
+# Compilar
 javac Main.java
 # Executar
 java Main
