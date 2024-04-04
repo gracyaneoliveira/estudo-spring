@@ -30,13 +30,17 @@ server.servlet.context-path=/api
 ````
 
 ### Install Java
+- **OPÇÃO 1**
 ````bash
 # Opção 1
 sudo apt update
-java -version
 sudo apt install openjdk-17-jdk
+java -version
 
-# NOTA: A configuração abaixo não é necessária para instalação do Java,
+# NOTA 1: Exibe uma lista de versões do Java disponíveis
+apt-cache search openjdk
+
+# NOTA 2: A configuração abaixo não é necessária para instalação do Java.
 # No entanto algumas aplicações que dependem do Java, requerem a variável
 # de ambiente JAVA_HOME que indica o caminho de instalação dele.
 
@@ -50,23 +54,10 @@ export PATH=$PATH:$JAVA_HOME/bin
 # Passo 3: Reload
 source ~/.bashrc
 echo $JAVA_HOME
+````
 
-
-# Passo 4: Testando
-# Criar um arquivo MeuPrograma.java com o conteúdo:
-public class MeuPrograma {
-
-    public static void main(String[] args) {
-        System.out.println("Java Hello!");
-    }
-}
-
-# Passo 5: Compilar
-javac Main.java
-# Executar
-java Main
-
-
+- **OPÇÃO 2**
+````bash
 # Opção 2 - SDKMAN
 sudo apt update
 sudo apt install unzip
@@ -81,16 +72,22 @@ sdk list java
 sdk install java 17.0.10-tem
 sdk current java
 
+# NOTA: A configuração abaixo não é necessária para instalação do Java.
+# No entanto algumas aplicações que dependem do Java, requerem a variável
+# de ambiente JAVA_HOME que indica o caminho de instalação dele.
+
+# Passo 1: Edite o arquivo .bashrc
 cd /home/{user}/
 vim /home/{user}/.bashrc
 
-# Conteúdo do arquivo .bashrc
+# Passo 2: Adicione esse trecho ao final do arquivo .bashrc
 export JAVA_HOME="$HOME/.sdkman/candidates/java/17.0.10-tem"
 # ou
 export JAVA_HOME="$SDKMAN_CANDIDATES_DIR/java/17.0.10-tem"
 # ou
 export JAVA_HOME="$SDKMAN_CANDIDATES_DIR/java/current"
 
+# Passo 3: Reload
 source .bashrc
 
 # Trocar versão do Java instalado
@@ -99,6 +96,22 @@ sdk default java 22-oracle
 
 # Ver versão do java instalado
 sdk list java | grep installed
+````
+
+- **Executando um programa Java**
+````bash
+# Criar um arquivo MeuPrograma.java com o conteúdo:
+public class MeuPrograma {
+
+    public static void main(String[] args) {
+        System.out.println("Java Hello!");
+    }
+}
+
+# Passo 5: Compilar
+javac Main.java
+# Executar
+java Main
 ````
 
 ### JDK E JRE
