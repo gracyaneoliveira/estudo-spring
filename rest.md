@@ -14,9 +14,9 @@ O URI (**Identificador Uniforme de Recursos**) é usado para identificar e local
 - Um URI pode ser uma URL ou um URN (Nome de Recurso Uniforme). URNs são uma forma de nomear recursos sem especificar como acessá-los, enquanto URLs especificam como acessar o recurso.
 
 **Exemplo:** `https://corporation.com/cursos/`
-- A URI une o Protocolo (**`https://`**);
-- A localização do recurso (URL - **`corporation.com`**);
-- E o nome do recurso (URN - **`/cursos/`**)
+- A URI une o Protocolo: `https://`
+- A localização do recurso: URL - `corporation.com`
+- E o nome do recurso: URN - `/cursos/`
 
 ### URL -  Uniform Resource Locator
 
@@ -24,9 +24,9 @@ O URI (**Identificador Uniforme de Recursos**) é usado para identificar e local
 - Uma URL contém informações sobre o **protocolo de comunicação** a ser usado (como HTTP, HTTPS, FTP), o **nome de domínio** do servidor onde o recurso está localizado e o **caminho para o recurso** no servidor.
 
 **Exemplo**: `https://www.example.com/index.html`
-- Esquema: **`https://`**
-- Nome de domínio: **`www.example.com`** 
-- Caminho para o recurso: **`/index.html`**
+- Esquema: `https://`
+- Nome de domínio: `www.example.com` 
+- Caminho para o recurso: `/index.html`
 
 ### Métodos HTTP
 Os **métodos HTTP** são comandos que indicam a ação a ser realizada em um recurso identificado por uma **URI**. Eles definem o tipo de operação que será realizada em um recurso quando uma solicitação HTTP é feita a um servidor web. 
