@@ -28,7 +28,6 @@ public class MeuPrimeiroController {
         var client2 = new Client("João", "joao@gmail.com", "77777");
         clientes.add(client1);
         clientes.add(client2);
-
         return clientes;
     }
 
@@ -55,7 +54,7 @@ public class MeuPrimeiroController {
     }
 
     @GetMapping("/clients/{testId}")
-    public ResponseEntity<Client> clientById(@PathVariable("testId") Long id) throws Exception {
+    public ResponseEntity<Client> clientById(@PathVariable(name = "testId") Long id) throws Exception {
         if(id == 1) {
             var client1 = new Client("Maria", "maria@gmail.com", "99999");
             return ResponseEntity.ok(client1);
@@ -70,7 +69,7 @@ public class MeuPrimeiroController {
     }
 
     @GetMapping("/clients/ativar")
-    @ResponseBody
+//    @ResponseBody
     public String hello() {
         Client joao = new Client("João", "joao@xyz.com", "3499998888");
 
