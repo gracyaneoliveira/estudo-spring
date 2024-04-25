@@ -186,7 +186,7 @@ Existem duas formas principais de negociação de conteúdo:
   O servidor pode então examinar o cabeçalho **Content-Type** para entender o formato dos dados recebidos e processá-los adequadamente. Se a API suportar JSON como um formato de entrada, ela poderá processar os dados enviados no corpo da solicitação.
 
 
-- **Negociação de Linguagem (Language Negotiation):** Isso ocorre quando o cliente e o servidor negociam sobre o idioma dos dados a serem trocados. Isso é feito usando os idiomas especificados nos cabeçalhos Accept-Language do cliente e Content-Language da resposta do servidor.
+- **Negociação de Linguagem (Language Negotiation):** Isso ocorre quando o cliente e o servidor negociam sobre o idioma dos dados a serem trocados. Isso é feito usando os idiomas especificados nos cabeçalhos **Accept-Language** do cliente e Content-Language da resposta do servidor.
 
   Suponha que você esteja fazendo uma solicitação GET para uma API que fornece conteúdo em diferentes idiomas. Você pode incluir um cabeçalho Accept-Language na sua solicitação para indicar seu idioma preferido:
 
@@ -205,3 +205,10 @@ Existem duas formas principais de negociação de conteúdo:
   O servidor pode então examinar esses cabeçalhos e responder com o conteúdo no idioma solicitado, desde que o suporte para esse idioma esteja disponível na API.
 
 A negociação de conteúdo é uma prática importante em APIs, pois permite que os clientes recebam dados em um formato que seja adequado às suas necessidades e informando ao servidor o formato de dados que deseja enviar.
+
+### Referências
+
+- [HTTP Status Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#information_responses)
+- [HTTP Method](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods)
+- [Content Negotiation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation)
+- [Estilo Arquitetural REST](https://www.devmedia.com.br/conhecendo-o-modelo-arquitetural-rest/28052)
