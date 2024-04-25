@@ -142,9 +142,66 @@ A negociação de conteúdo (content negotiation) em uma API é o processo pelo 
 
 Existem duas formas principais de negociação de conteúdo:
 
-- **Negociação de Tipo de Mídia (Media Type Negotiation):** Isso ocorre quando o cliente e o servidor negociam sobre o tipo de mídia dos dados a serem trocados. Isso é feito usando os tipos de mídia (por exemplo, JSON, XML, HTML) especificados nos cabeçalhos Accept do cliente e Content-Type da resposta do servidor.
+- **Negociação de Tipo de Mídia (Media Type Negotiation):** Isso ocorre quando o cliente e o servidor negociam sobre o tipo de mídia dos dados a serem trocados. Isso é feito usando os tipos de mídia (por exemplo, JSON, XML, HTML) especificados nos cabeçalhos **Accept** do cliente e **Content-Type** da resposta do servidor.
+
+  Suponha que você esteja fazendo uma solicitação GET para uma API que fornece informações sobre usuários em diferentes formatos, como JSON e XML. Você pode incluir um cabeçalho **Accept** na sua solicitação para indicar qual formato você prefere receber:
+  
+  #### Neste exemplo, o cliente prefere receber a resposta no formato JSON.
+  ```text
+  GET /api/users HTTP/1.1
+  Host: example.com
+  Accept: application/json
+  ```
+  #### Neste exemplo, o cliente prefere receber a resposta no formato XML. 
+   ```text
+  GET /api/users HTTP/1.1
+  Host: example.com
+  Accept: application/xml
+  ```
+  O servidor pode então examinar esses cabeçalhos e responder com os dados no formato solicitado, desde que este formato seja suportado pela API.
+
+  Suponha que você esteja fazendo uma solicitação **POST** para uma **API** para criar um novo recurso, como um novo usuário, e você está enviando os dados no formato **JSON** ou **XML**. Você pode incluir um cabeçalho **Content-Type** na sua solicitação para indicar o formato dos dados enviados:
+  #### Neste exemplo, o cliente está enviando os dados no formato JSON para criar um novo usuário.
+   ```text
+  POST /api/users HTTP/1.1
+  Host: example.com
+  Content-Type: application/json
+  
+  {
+  "name": "John Doe",
+  "email": "john@example.com"
+  }
+  ```
+  #### Neste exemplo, o cliente está enviando os dados no formato XML para criar um novo usuário.
+   ```text
+  POST /api/users HTTP/1.1
+  Host: example.com
+  Content-Type: application/xml
+  
+  <user>
+    <name>John Doe</name>
+    <email>john@example.com</email>
+  </user>
+  ``` 
+  O servidor pode então examinar o cabeçalho **Content-Type** para entender o formato dos dados recebidos e processá-los adequadamente. Se a API suportar JSON como um formato de entrada, ela poderá processar os dados enviados no corpo da solicitação.
+
 
 - **Negociação de Linguagem (Language Negotiation):** Isso ocorre quando o cliente e o servidor negociam sobre o idioma dos dados a serem trocados. Isso é feito usando os idiomas especificados nos cabeçalhos Accept-Language do cliente e Content-Language da resposta do servidor.
 
- 
+  Suponha que você esteja fazendo uma solicitação GET para uma API que fornece conteúdo em diferentes idiomas. Você pode incluir um cabeçalho Accept-Language na sua solicitação para indicar seu idioma preferido:
+
+  #### Neste exemplo, o cliente prefere receber o conteúdo em inglês americano.
+   ```text
+  GET /api/content HTTP/1.1
+  Host: example.com
+  Accept-Language: en-US
+  ``` 
+  #### Neste outro exemplo, o cliente prefere receber o conteúdo em português do Brasil.
+   ```text
+  GET /api/content HTTP/1.1
+  Host: example.com
+  Accept-Language: pt-BR
+  ```
+  O servidor pode então examinar esses cabeçalhos e responder com o conteúdo no idioma solicitado, desde que o suporte para esse idioma esteja disponível na API.
+
 A negociação de conteúdo é uma prática importante em APIs, pois permite que os clientes recebam dados em um formato que seja adequado às suas necessidades e informando ao servidor o formato de dados que deseja enviar.
