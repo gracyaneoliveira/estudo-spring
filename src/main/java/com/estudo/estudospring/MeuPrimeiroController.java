@@ -68,6 +68,7 @@ public class MeuPrimeiroController {
         return ResponseEntity.status(HttpStatus.CREATED).body(client1);
     }
 
+//    @ResponseStatus(HttpStatus.ACCEPTED)
     @GetMapping("/clients/ativar")
 //    @ResponseBody
     public String hello() {
