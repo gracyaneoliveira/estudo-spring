@@ -78,4 +78,9 @@ public class MeuPrimeiroController {
 
         return "Cliente Ativado!";
     }
+
+    @GetMapping("/filtro")
+    public Client filtro(@RequestParam String id, @RequestParam String nome) {
+        return new Client("João".concat(id).concat(nome), "joao@xyz.com", "3499998888");
+    }
 }
