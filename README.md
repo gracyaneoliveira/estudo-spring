@@ -170,3 +170,18 @@ A JVM faz uma interpretação desse arquivo.
 JIT Just in time compiler- compilador: Ele pode transformar instruções do bytecode em código nativo de máquina durante a execução do programa
 se ele assim achar necessário, como um código é executado repetidas vezes.  
 ````
+
+### Cursos
+````text
+Lambda Java 8 - Playlist
+https://www.youtube.com/playlist?list=PLuYctAHjg89ZkhgOQo0zcTtmHY5nuRYud
+
+Spring Academy
+https://spring.academy/courses
+
+Kotlin e Spring do ZERO ao Avançado
+https://www.udemy.com/course/kotlin-spring
+
+API REST e Spring Boot: Aprenda do Zero e na Prática
+https://www.udemy.com/course/api-rest-e-spring-boot-aprenda-do-zero-e-na-pratica
+````

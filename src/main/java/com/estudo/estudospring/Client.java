@@ -70,9 +70,11 @@ public class Client {
     public static void main(String[] args) {
         var c1 = new Client();
         c1.setEmail("email");
+        c1.setNome("1");
 
         var c2 = new Client();
         c2.setEmail("email");
+        c2.setNome("2");
 
         System.out.println(c1.equals(c2));
     }
