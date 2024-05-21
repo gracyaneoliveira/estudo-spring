@@ -181,6 +181,9 @@ https://spring.academy/courses
 Curso Lambda, Streams e Optional do Java 8 - Playlist
 https://www.youtube.com/playlist?list=PLuYctAHjg89ZkhgOQo0zcTtmHY5nuRYud
 
+Learn Kotlin Programming – Full Course for Beginners
+https://www.youtube.com/watch?v=EExSSotojVI
+
 # Udemy
 
 Kotlin e Spring do ZERO ao Avançado
