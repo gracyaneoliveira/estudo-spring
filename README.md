@@ -173,11 +173,15 @@ se ele assim achar necessário, como um código é executado repetidas vezes.
 
 ### Cursos
 ````text
-Lambda Java 8 - Playlist
-https://www.youtube.com/playlist?list=PLuYctAHjg89ZkhgOQo0zcTtmHY5nuRYud
+## Free
 
 Spring Academy
 https://spring.academy/courses
+
+Curso Lambda, Streams e Optional do Java 8 - Playlist
+https://www.youtube.com/playlist?list=PLuYctAHjg89ZkhgOQo0zcTtmHY5nuRYud
+
+# Udemy
 
 Kotlin e Spring do ZERO ao Avançado
 https://www.udemy.com/course/kotlin-spring
@@ -185,7 +189,14 @@ https://www.udemy.com/course/kotlin-spring
 API REST e Spring Boot: Aprenda do Zero e na Prática
 https://www.udemy.com/course/api-rest-e-spring-boot-aprenda-do-zero-e-na-pratica
 
-Ebooks: Casa do Código
+Testes unitários em JAVA: Domine JUnit 4, Mockito e TDD
+https://www.udemy.com/course/testes-unitarios-em-java
+
+Testes unitários com JUnit 5
+https://www.udemy.com/course/testes-unitarios-junit5
+
+# Ebooks: Casa do Código
+
 APIs REST: Seus serviços prontos para o mundo real
 https://www.casadocodigo.com.br/products/livro-apis-rest
 
