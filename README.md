@@ -184,4 +184,11 @@ https://www.udemy.com/course/kotlin-spring
 
 API REST e Spring Boot: Aprenda do Zero e na Prática
 https://www.udemy.com/course/api-rest-e-spring-boot-aprenda-do-zero-e-na-pratica
+
+Ebooks: Casa do Código
+APIs REST: Seus serviços prontos para o mundo real
+https://www.casadocodigo.com.br/products/livro-apis-rest
+
+APIs REST em Kotlin: Seus serviços prontos para o mundo real
+https://www.casadocodigo.com.br/products/livro-apis-rest-kotlin
 ````
